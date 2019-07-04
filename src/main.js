@@ -3,13 +3,17 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import store from './store'
+/* es6-shim,es6-promise ie兼容需要 */
+import 'es6-shim'
+require('es6-promise').polyfill()
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
