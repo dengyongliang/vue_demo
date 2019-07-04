@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h2>mapGetters: {{ name }}</h2>
     <ul>
       <li>
         <a
@@ -84,12 +84,27 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  beforeMount () {
+
+  },
+  mounted () {
+
+  },
+  methods: {
+
+  },
+  computed: {
+    ...mapGetters([
+      'name'
+    ])
   }
 }
 </script>
